@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- so meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="description" content="基于Node.js Markdown静态网站生成器;专注于创作">
+		<meta name="author" content="Plucky">
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+		<!-- title -->
+		<title>eedoc - Logic</title>
+		
+			<link rel="stylesheet" href="https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css">
+		
+		<!-- styles -->
+		<link rel="stylesheet" href="../css/style.css">
+		<!-- persian styles -->
+		<link rel="stylesheet" href="../css/rtl.css">
+		
+		<!-- jquery -->
+		<script src="../lib/jquery/jquery.min.js"></script>
+		
+		
+		
+	</head>
+
+	<body class="max-width mx-auto px3 ltr">
+		<div class="content index py4">
+			
+	<div id="header-post">
+		<a id="menu-icon" href="#">
+			<i class="fas fa-bars fa-lg"></i>
+		</a>
+		<a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+		<a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+			 class="fas fa-chevron-up fa-lg"></i>
+		</a>
+		<span id="menu">
+			<span id="nav">
+				<ul>
+					<li><a href="../index">
+					Home
+					</a></li>
+					<li><a href="../archives">
+					Writing
+					</a></li>
+					<li><a href="../about">
+					About
+					</a></li>
+					<li><a href="../message">
+					Message
+					</a></li>
+				</ul>
+			</span>
+	
+			<br />
+			<span id="actions">
+				<ul>
+					<li>
+						<a class="icon" href="#">
+							<i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+						</a>
+					</li>
+					<li>
+						<a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+							<i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+						</a>
+					</li>
+					<li>
+						<a class="icon" href="#">
+							<i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+							 onclick="$('#share').toggle();return false;"></i>
+						</a>
+					</li>
+				</ul>
+				<span id="i-prev" class="info" style="display:none;">Not Support(Pre)</span>
+				<span id="i-next" class="info" style="display:none;">Not Support(Nex)</span>
+				<span id="i-top" class="info" style="display:none;">Back to top</span>
+				<span id="i-share" class="info" style="display:none;">Not Support(Share)</span>
+			</span>
+			<br />
+			<div id="share" style="display: none">
+				<ul>
+					<li><a class="icon" href="#"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+					<li><a class="icon" href="#"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div id="toc">
+				<ol class="toc-child">
+					
+						
+					
+				</ol>
+			</div>
+		</span>
+	</div>
+	<div class="content index">
+		<article class="post" itemscope itemtype="#">
+			<header>
+				<h1 class="posttitle" itemprop="name headline">eedoc</h1>
+				<div class="meta">
+					<span class="author" itemprop="author" itemscope itemtype="#">
+						<span itemprop="name">Plucky</span>
+					</span>
+					<div class="postdate">
+						<time datetime="" itemprop="datePublished">2019-07-18 21:45:00</time>
+					</div>
+					
+					<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+						
+						<div class="article-tag">
+							<i class="engineer icon-view"></i>
+							<span>
+								<span id="busuanzi_value_page_pv">0</span>
+							</span>
+						</div>
+					
+					<div class="article-category">
+					        <i class="fas fa-archive"></i>
+					        <a class="category-link" href="#">default</a> › 
+							<a class="category-link" href="#">旅拍</a>
+					</div>
+					
+						<div class="article-tag">
+							<i class="fas fa-tag"></i>
+							 
+								<a class="tag-link" href="#">分镜</a>
+							 
+								<a class="tag-link" href="#">人物</a>
+							
+						</div>
+					
+				</div>
+			</header>
+			<div class="content" itemprop="articleBody">
+				<h3 id="特点">特点</h3><ul>
+<li>轻量、简易、简洁、高颜值</li>
+<li>专注于写作</li>
+<li>支持<code>gitalk</code>、<code>畅言</code>评论</li>
+<li>支持全文检索</li>
+<li>支持分类、归档</li>
+<li>可扩展：可以参考系统内置主题自行扩展</li>
+</ul>
+<h3 id="主题">主题</h3><p>目前内置三种主题: <code>default</code>、<code>echo</code>、<code>nav</code>,可以在 <code>config.json</code> 中配置 <code>theme</code> 字段</p>
+<div align="center">
+
+<img src='http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080jpg' title='' alt='eedoc' class='post-img-left'>
+
+<a href='http://www.1991th.com/blog/' title='null' target='_self'>博客主题@echo</a>
+
+</div>
+
+<div align="center">
+
+<img src='http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080jpg' title='' alt='eedoc' class='post-img-left'>
+
+<a href='http://www.1991th.com/nav/' title='null' target='_self'>导航主题@nav</a>
+
+</div>
+
+<h3 id="安装">安装</h3><figure class='highlight undefined'><table><tbody><tr><td class='code'><pre>npm install eedoc -g  #创建全局eedoc
+sudo npm install eedoc -g  #mac下以root权限运行</pre></td></tr></tbody></table></figure><h3 id="开始使用">开始使用</h3><figure class='highlight undefined'><table><tbody><tr><td class='code'><pre>$ eedoc
+$ mkdir sample
+$ cd sample
+$ eedoc init</pre></td></tr></tbody></table></figure><h3 id="使用方法">使用方法</h3><figure class='highlight undefined'><table><tbody><tr><td class='code'><pre>eedoc -V #查看版本
+eedoc -i #初始化文档(init a documentation.)
+eedoc -b #创建静态页(build static html page.)
+eedoc -s #运行服务(run the page at http://127.0.0.1:1991.)
+eedoc -d #发布至git版本库(publish static page to git repo.)
+eedoc -f #发布至ftp服务器(publish static page to ftp server.)
+eedoc -c #清除缓存及静态页(clean the public floder.)
+eedoc -t #选择主题(select a theme.)
+eedoc -n #新建文章(generate a new article.)</pre></td></tr></tbody></table></figure><h3 id="gitalk 评论功能 <code>since 1.5.4</code>">gitalk 评论功能 <code>since 1.5.4</code></h3><p>目前支持 <code>畅言</code> <code>gitalk</code> 两种评论插件，在配置文件中添加相应的参数即可,其中 <code>gitalk</code> 基于 github issues,具体说明请自行参考  <a href='https://github.com/gitalk/gitalk/blob/master/readme-cn.md' title='null' target='_self'>gitalk</a></p>
+<figure class='highlight undefined'><table><tbody><tr><td class='code'><pre><span class="string">"comment"</span>: {
+    <span class="string">"changyan"</span>: {
+      <span class="string">"appid"</span>: <span class="string">""</span>,
+      <span class="string">"conf"</span>: <span class="string">""</span>
+    },
+    <span class="string">"gitalk"</span>:{
+      <span class="string">"clientID"</span>: <span class="string">"xxx"</span>,
+      <span class="string">"clientSecret"</span>: <span class="string">"xxx"</span>,
+      <span class="string">"repo"</span>: <span class="string">"xxx"</span>,
+      <span class="string">"owner"</span>: <span class="string">"xxx"</span>,
+      <span class="string">"admin"</span>: [<span class="string">"xxx"</span>],
+      <span class="string">"distractionFreeMode"</span>: <span class="literal">true</span>
+    }
+}</pre></td></tr></tbody></table></figure><h3 id="注意事项: markdown格式如下">注意事项: markdown格式如下</h3><figure class='highlight undefined'><table><tbody><tr><td class='code'><pre>标题
+===
+描述
+
+&lt;!-- eedoc {
+    "banner":false,
+    "create_time":"2019-07-18 21:45",
+    "update_time":"2019-10-07 20:01",
+    "category":"旅拍",
+    "cover":"../assets/single-01.jpg",
+    "tags":["分镜","人物"]
+} eedoc --&gt;
+
+### 以下都是内容
+Hi,我是静静</pre></td></tr></tbody></table></figure><h3 id="markdown 格式参考">Markdown 格式参考</h3><p><a href='doc/post.md' title='null' target='_self'>点这里</a>,然后打开编辑器,参考文章该如何写作</p>
+<h3 id="自定义主题说明">自定义主题说明</h3><p><a href='template/ReadMe.md' title='null' target='_self'>点这里</a>,具体参数如何使用,可参考 <code>template/echo</code> 主题</p>
+<h3 id="完整配置(config.json)">完整配置(config.json)</h3><figure class='highlight undefined'><table><tbody><tr><td class='code'><pre>{
+    <span class="string">"title"</span>: <span class="string">"风之谷"</span>,
+    <span class="string">"description"</span>: <span class="string">"念念不忘,必有回响"</span>,
+    <span class="string">"home"</span>: <span class="string">"http://1991th.com"</span>,
+    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,
+    <span class="string">"licenses"</span>: <span class="string">"MIT"</span>,
+    <span class="string">"doc"</span>: <span class="string">"doc"</span>,
+    <span class="string">"out"</span>: <span class="string">"i"</span>,
+    <span class="string">"pash"</span>: <span class="literal">true</span>,
+    <span class="string">"excludeDash"</span>:<span class="literal">true</span>,
+    <span class="string">"icp"</span>: <span class="string">"鲁ICP备 xxxxxx号"</span>,
+    <span class="string">"user"</span>: {
+        <span class="string">"name"</span>: <span class="string">"User"</span>,
+        <span class="string">"desc"</span>: <span class="string">"I'm a boy."</span>,
+        <span class="string">"avatar"</span>: <span class="string">"http://img.1991th.com/tuchongeter/statics/default_avatar.jpg"</span>,
+        <span class="string">"email"</span>: <span class="string">"user@echo.engineer"</span>,
+        <span class="string">"social"</span>: [{
+            <span class="string">"link"</span>: <span class="string">"mailto:plucky@echo.engineer"</span>,
+            <span class="string">"name"</span>: <span class="string">"邮箱"</span>,
+            <span class="string">"icon"</span>: <span class="string">"icon-email"</span>,
+            <span class="string">"target"</span>: <span class="string">"_blank"</span>
+        }, {
+            <span class="string">"link"</span>: <span class="string">"https://space.bilibili.com/362980071"</span>,
+            <span class="string">"name"</span>: <span class="string">"B站"</span>,
+            <span class="string">"icon"</span>: <span class="string">"icon-bilibili"</span>,
+            <span class="string">"target"</span>: <span class="string">"_blank"</span>
+        }, {
+            <span class="string">"link"</span>: <span class="string">"http://plucky.tuchong.com/"</span>,
+            <span class="string">"name"</span>: <span class="string">"图虫"</span>,
+            <span class="string">"icon"</span>: <span class="string">"icon-tuchong"</span>,
+            <span class="string">"target"</span>: <span class="string">"_blank"</span>
+        }, {
+            <span class="string">"link"</span>: <span class="string">"https://github.com/Pluckypan"</span>,
+            <span class="string">"name"</span>: <span class="string">"Github"</span>,
+            <span class="string">"icon"</span>: <span class="string">"icon-github"</span>,
+            <span class="string">"target"</span>: <span class="string">"_blank"</span>
+        }]
+    },
+    <span class="string">"links"</span>: [{
+        <span class="string">"link"</span>: <span class="string">"http://www.1991th.com/"</span>,
+        <span class="string">"name"</span>: <span class="string">"风之谷"</span>,
+        <span class="string">"desc"</span>: <span class="string">"Take it Easy &amp; Make it Happen"</span>,
+        <span class="string">"logo"</span>: <span class="string">"http://img.1991th.com/tuchongeter/statics/041122"</span>,
+        <span class="string">"image"</span>: <span class="string">""</span>
+    }, {
+        <span class="string">"link"</span>: <span class="string">"http://www.echo.engineer/"</span>,
+        <span class="string">"name"</span>: <span class="string">"回声嘹亮"</span>,
+        <span class="string">"desc"</span>: <span class="string">"I'm an Engineer"</span>,
+        <span class="string">"logo"</span>: <span class="string">"http://img.1991th.com/tuchongeter/statics/041122"</span>,
+        <span class="string">"image"</span>: <span class="string">""</span>
+    }],
+    <span class="string">"statics"</span>: <span class="string">"assets"</span>,
+    <span class="string">"deploys"</span>: [{
+        <span class="string">"repo"</span>: <span class="string">""</span>,
+        <span class="string">"branch"</span>: <span class="string">"gh-pages"</span>,
+        <span class="string">"message"</span>: <span class="string">"Compiler generation page "</span>
+    }],
+    <span class="string">"ftp"</span>: {
+        <span class="string">"host"</span>: <span class="string">"xxx"</span>,
+        <span class="string">"port"</span>: <span class="number">21</span>,
+        <span class="string">"user"</span>: <span class="string">"xxx"</span>,
+        <span class="string">"pass"</span>: <span class="string">"xxx"</span>,
+        <span class="string">"cwd"</span>: <span class="string">"xxx"</span>,
+        <span class="string">"deleteRemote"</span>: <span class="literal">false</span>
+    },
+    <span class="string">"cname"</span>: <span class="string">""</span>,
+    <span class="string">"comment"</span>: {
+        <span class="string">"changyan"</span>: {
+            <span class="string">"appid"</span>: <span class="literal">null</span>,
+            <span class="string">"conf"</span>: <span class="string">"***"</span>
+        },
+        <span class="string">"gitalk"</span>: {
+            <span class="string">"clientID"</span>: <span class="literal">null</span>,
+            <span class="string">"clientSecret"</span>: <span class="string">"***"</span>,
+            <span class="string">"repo"</span>: <span class="string">"***"</span>,
+            <span class="string">"owner"</span>: <span class="string">"***"</span>,
+            <span class="string">"admin"</span>: [
+                <span class="string">"***"</span>
+            ],
+            <span class="string">"distractionFreeMode"</span>: <span class="literal">true</span>
+        }
+    },
+    <span class="string">"iconfont"</span>: {
+        <span class="string">"link"</span>: <span class="string">"https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css"</span>,
+        <span class="string">"family"</span>: <span class="string">"engineer"</span>
+    },
+    <span class="string">"adv"</span>: {
+        <span class="string">"link"</span>: <span class="string">"http://www.1991th.com/"</span>,
+        <span class="string">"name"</span>: <span class="string">"天猫导流"</span>,
+        <span class="string">"desc"</span>: <span class="string">"天猫2019双十一.火热进行中"</span>,
+        <span class="string">"image"</span>: <span class="string">"assets/default-adv.png"</span>,
+        <span class="string">"target"</span>: <span class="string">"blank"</span>
+    },
+    <span class="string">"theme"</span>: <span class="string">"echo"</span>,
+    <span class="string">"page"</span>: {
+        <span class="string">"index.ejs"</span>: {
+            <span class="string">"name"</span>: <span class="string">"首页"</span>,
+            <span class="string">"path"</span>: <span class="string">"index.html"</span>,
+            <span class="string">"render"</span>: <span class="string">"index.json"</span>
+        },
+        <span class="string">"list.ejs"</span>: {
+            <span class="string">"name"</span>: <span class="string">"搜索"</span>
+        },
+        <span class="string">"about.ejs"</span>: {
+            <span class="string">"name"</span>: <span class="string">"关于我"</span>,
+            <span class="string">"render"</span>: <span class="string">"about.md"</span>
+        },
+        <span class="string">"message.ejs"</span>: {
+            <span class="string">"name"</span>: <span class="string">"留言板"</span>,
+            <span class="string">"render"</span>: <span class="string">"message.json"</span>
+        }
+    },
+    <span class="string">"nav"</span>: {
+        <span class="string">"busuanzi"</span>: <span class="literal">true</span>,
+        <span class="string">"topLinks"</span>: [{
+            <span class="string">"link"</span>: <span class="string">"http://www.1991th.com/"</span>,
+            <span class="string">"name"</span>: <span class="string">"首页"</span>,
+            <span class="string">"target"</span>: <span class="string">"_self"</span>
+        }]
+    },
+    <span class="string">"echo"</span>: {
+        <span class="string">"stars"</span>: {
+            <span class="string">"name"</span>: <span class="string">"星球"</span>,
+            <span class="string">"links"</span>: [{
+                <span class="string">"link"</span>: <span class="string">"#"</span>,
+                <span class="string">"name"</span>: <span class="string">"解忧杂货铺"</span>,
+                <span class="string">"target"</span>: <span class="string">"_self"</span>
+            }, {
+                <span class="string">"link"</span>: <span class="string">"#"</span>,
+                <span class="string">"name"</span>: <span class="string">"影单"</span>,
+                <span class="string">"target"</span>: <span class="string">"_self"</span>
+            }, {
+                <span class="string">"link"</span>: <span class="string">"#"</span>,
+                <span class="string">"name"</span>: <span class="string">"歌单"</span>,
+                <span class="string">"target"</span>: <span class="string">"_self"</span>
+            }]
+        },
+        <span class="string">"photograph"</span>: {
+            <span class="string">"name"</span>: <span class="string">"photograph"</span>,
+            <span class="string">"links"</span>: [{
+                <span class="string">"link"</span>: <span class="string">"http://www.1991th.com/photos/index.html"</span>,
+                <span class="string">"name"</span>: <span class="string">"香山红叶落满天"</span>,
+                <span class="string">"target"</span>: <span class="string">"_blank"</span>,
+                <span class="string">"image"</span>: <span class="string">"http://infinitythemes.ge/images/instagram/5.jpg"</span>
+            }]
+        },
+        <span class="string">"galleryAbout"</span>: [<span class="string">"./assets/single-01.jpg"</span>, <span class="string">"./assets/single-02.jpg"</span>]
+    }
+}</pre></td></tr></tbody></table></figure>
+			</div>
+			
+				<div class="comment_container">
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+  <script type="text/javascript">
+	var gitalk = new Gitalk({
+	  clientID: "9c76e88deff9a972017c",
+	  clientSecret: "a5054a01a05bbe9348cdbf5c551349a6c879e0eb",
+	  repo: "logic",
+	  owner: "Pluckypan",
+	  admin: "Pluckypan",
+	  distractionFreeMode: "true",
+	  labels:['post']
+	});
+	gitalk.render('gitalk-container');
+  </script>
+</div>
+
+			
+		</article>
+	
+		<div id="footer-post-container">
+			<div id="footer-post">
+				
+			</div>
+		</div>
+	</div>		
+			<footer id="footer">
+				<div class="footer-left">
+					Copyright &copy; <span class="year">2016</span> echo.engineer
+				</div>
+				<div class="footer-right">
+					<nav>
+						<ul>
+							<li><a href="../index">
+							Home
+							</a></li>
+							<li><a href="../archives">
+							Writing
+							</a></li>
+							<li><a href="../about">
+							About
+							</a></li>
+							<li><a href="../message">
+							Message
+							</a></li>
+						</ul>
+					</nav>
+				</div>
+			</footer>
+
+		</div>
+		<!-- styles -->
+		<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+		<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+		<link rel="stylesheet" href="../lib/jquery-flexslider/jquery.flexslider.base.css">
+		<script src="../lib/jquery-flexslider/jquery.flexslider-min.js"></script>
+		<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+		<!-- clipboard -->
+
+		  <script src="../lib/clipboard/clipboard.min.js"></script>
+		  <script type="text/javascript">
+		  $(function() {
+			var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+			btn += '<i class="far fa-clone"></i>';
+			btn += '</span>'; 
+			$(".highlight table").before(btn);
+			var clip = new ClipboardJS('.btn-copy', {
+			  text: function(trigger) {
+				return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+			  }
+			});
+			clip.on('success', function(e) {
+			  e.trigger.setAttribute('aria-label', "Copied");
+			  e.clearSelection();
+			})
+		  })
+		  </script>
+		  
+		<script src="../js/main.js"></script>
+	</body>
+</html>			
