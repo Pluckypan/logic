@@ -1,7 +1,7 @@
 Hi, I’m a theme for the Hexo blogging framework. I’m particularly great for a personal web page with a simple blog.
 <br>
 <br>
-![logo](../assets/cactus.png?align=center)
+![logo](assets/cactus.png?align=center)
 <br>
 <br>
 These are my best features:

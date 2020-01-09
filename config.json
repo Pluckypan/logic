@@ -16,8 +16,9 @@
 		"desc": "True man does what he will, not what he must.",
 		"avatar": "http://img.1991th.com/tuchongeter/statics/default_avatar.jpg",
 		"email": "plucky@echo.engineer",
-		"social": [{
-				"link": "plucky@echo.engineer",
+		"social": [
+			{
+				"link": "mailto:plucky@echo.engineer",
 				"name": "邮箱",
 				"icon": "icon-email",
 				"target": "_blank"
@@ -42,7 +43,8 @@
 			}
 		]
 	},
-	"links": [{
+	"links": [
+		{
 			"link": "http://www.1991th.com/",
 			"name": "风之谷",
 			"desc": "Take it Easy & Make it Happen",
@@ -58,11 +60,13 @@
 		}
 	],
 	"statics": "assets",
-	"deploys": [{
-		"repo": "git@github.com:Pluckypan/logic.git",
-		"branch": "gh-pages",
-		"message": "Compiler generation page "
-	}],
+	"deploys": [
+		{
+			"repo": "git@github.com:Pluckypan/logic.git",
+			"branch": "gh-pages",
+			"message": "Compiler generation page "
+		}
+	],
 	"ftp": {
 		"host": "xxx",
 		"port": 21,
@@ -71,7 +75,7 @@
 		"cwd": "xxx",
 		"deleteRemote": false
 	},
-	"cname": "",
+	"cname": "echo.engineer",
 	"comment": {
 		"changyan": {
 			"appid": null,
@@ -82,7 +86,9 @@
 			"clientSecret": "a5054a01a05bbe9348cdbf5c551349a6c879e0eb",
 			"repo": "logic",
 			"owner": "Pluckypan",
-			"admin": ["Pluckypan"],
+			"admin": [
+				"Pluckypan"
+			],
 			"distractionFreeMode": true
 		}
 	},
@@ -97,7 +103,7 @@
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "so",
+	"theme": "cactus",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -119,16 +125,19 @@
 	"nav": {
 		"busuanzi": true,
 		"baidu": null,
-		"topLinks": [{
-			"link": "http://www.1991th.com/",
-			"name": "首页",
-			"target": "_self"
-		}]
+		"topLinks": [
+			{
+				"link": "http://www.1991th.com/",
+				"name": "首页",
+				"target": "_self"
+			}
+		]
 	},
 	"echo": {
 		"stars": {
 			"name": "星球",
-			"links": [{
+			"links": [
+				{
 					"link": "#",
 					"name": "解忧杂货铺",
 					"target": "_self"
@@ -147,12 +156,14 @@
 		},
 		"photograph": {
 			"name": "photograph",
-			"links": [{
-				"link": "http://www.1991th.com/photos/index.html",
-				"name": "香山红叶落满天",
-				"target": "_blank",
-				"image": "http://infinitythemes.ge/images/instagram/5.jpg"
-			}]
+			"links": [
+				{
+					"link": "http://www.1991th.com/photos/index.html",
+					"name": "香山红叶落满天",
+					"target": "_blank",
+					"image": "http://infinitythemes.ge/images/instagram/5.jpg"
+				}
+			]
 		},
 		"galleryAbout": [
 			"./assets/single-01.jpg",
