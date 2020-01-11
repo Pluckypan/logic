@@ -1,18 +1,22 @@
-Hi, I’m a theme for the Hexo blogging framework. I’m particularly great for a personal web page with a simple blog.
-<br>
-<br>
-![logo](assets/cactus.png?align=center)
-<br>
-<br>
-These are my best features:
-- I am fully responsive
-- I support [Gitalk](https://github.com/gitalk/gitalk) integration
-- I support [Baidu Analytics](https://tongji.baidu.com/web/homepage/index)
-- I have a configurable navigation menu
-- I support several code highlighting schemes
-- I have [Font Awesome](http://fontawesome.io/) icons
-- I can live for months without 🌧
 
-Clone or fork [my repo](https://github.com/Pluckypan/cactus) if you like me!
-<br>
-<br>
+> 算法是程序的灵魂
+
+![logo](assets/cactus.png?align=left&width=160)
+
+## 说点啥
+他们说,
+
+「算法」就是「原子弹」,你轻易不会使用它
+
+可谁知道呢?
+
+至少它是有趣的
+
+也许这就是这个博客的目的吧...
+
+## 计划
+- [ ] 10个经典算法
+- [ ] 集齐50个算法
+- [ ] 算法相关的故事
+
+<div style="height:120px;"></div>

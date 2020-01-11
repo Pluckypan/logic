@@ -1,6 +1,8 @@
 # Projects
-[Hexo](https://hexo.io/?target=_blank): A fast, simple & powerful blog framework
+[eedoc](https://github.com/Pluckypan/eedoc/?target=_blank): 基于 `Node.js` `Markdown` 静态网站生成器;专注于创作;轻量 & 简易 & 简洁 & 高颜值
 
-[Font Awesome](http://fontawesome.io/?target=_blank): The iconic font and CSS toolkit
+[woody](https://github.com/Pluckypan/Woody/?target=_blank): chrome extension,简洁大气 & 安全可靠的书签管理工具;基于 `Gist`
 
-[Bootstrap](http://getbootstrap.com/?target=_blank): The most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+[cactus](https://github.com/Pluckypan/cactus/?target=_blank): a theme for the eedoc blogging framework - **`eedoc`**
+
+[HappyMaven](https://github.com/Pluckypan/cactus/?target=_blank): Provide an easy way to publish your archives(AARS or JARS) to Maven repositories
