@@ -210,7 +210,7 @@
         arr[i - (len-s)] = temp[i];
     }
     <span class="keyword">return</span> arr;
-}</pre></td></tr></tbody></table></figure><p>无限循环发的核心思想是：可以将整体看成一个周期循环的数组,<code>k</code> 可以认为只是对这个周期函数作了一个平移.需要分配的空间是 <code>O(2n)</code> 即两倍数组长度,时间复杂度为 <code>O(2nn)</code>即两次循环;其中第一次循环的目的只是单纯赋值.</p>
+}</pre></td></tr></tbody></table></figure><p>无限循环发的核心思想是：可以将整体看成一个周期循环的数组,<code>k</code> 可以认为只是对这个周期函数作了一个平移.需要分配的空间是 <code>O(2n)</code> 即两倍数组长度,时间复杂度为 <code>O(2n)</code>即两次循环;其中第一次循环的目的只是单纯赋值.</p>
 
 			</div>
 			
